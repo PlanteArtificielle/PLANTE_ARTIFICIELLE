@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متجر النباتات الاصطناعية | Plante Artificielle</title>
+<style>
+/* إعدادات عامة */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    direction: rtl;
+    background: url('flowers-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: rgba(46,125,50,0.9);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* زر الاتصال */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+.contact-buttons a {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.contact-buttons .call {
+    background-color: #1976d2;
+}
+.contact-buttons .call:hover {
+    background-color: #0d47a1;
+}
+.contact-buttons .whatsapp {
+    background-color: #25D366;
+}
+.contact-buttons .whatsapp:hover {
+    background-color: #1ebe5d;
+}
+
+/* Container المنتجات */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* عنوان القسم */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    color: #2e7d32;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+/* شبكة المنتجات */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* بطاقة المنتج */
+.product {
+    background: rgba(255,255,255,0.9);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+.product:hover {
+    transform: translateY(-5px);
+}
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.product img:hover {
+    transform: scale(1.05);
+}
+.product h3 {
+    margin: 12px 0;
+    color: #2e7d32;
+}
+.product .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d84315;
+}
+.product .shipping {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* زر الطلب داخل المنتج */
+.btn-order {
+    display: block;
+    margin: 10px auto 0 auto;
+    padding: 12px;
+    background-color: #2e7d32;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn-order:hover {
+    background-color: #1b5e20;
+}
+
+/* زر واتساب عائم */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 28px;
+    padding: 16px 18px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+}
+
+/* رسالة الترحيب */
+.welcome-section {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+.welcome-section h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+.welcome-section p {
+    font-size: 22px;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+    header h1 { font-size: 28px; }
+    .welcome-section h2 { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>متجر النباتات الاصطناعية</h1>
+    <p>التوصيل مجاني لجميع أنحاء المملكة</p>
+    <div class="contact-buttons">
+        <a href="tel:+212728423391" class="call">📞 الاتصال الآن</a>
+        <a href="https://wa.me/212728423391?text=مرحبًا! أرغب في الاستفسار عن المنتجات." class="whatsapp" target="_blank">📲 واتساب</a>
+    </div>
+</header>
+
+<!-- قسم الترحيب -->
+<section class="welcome-section">
+    <h2>مرحبا بكم في متجرنا 🌿</h2>
+    <p>اكتشف أجمل النباتات الاصطناعية لتزيين منزلك ومكتبك</p>
+</section>
+
+<!-- قسم المنتجات -->
+<div class="container">
+    <div class="section-title">نباتات اصطناعية</div>
+    <div class="products">
+        <!-- جميع المنتجات الـ26 -->
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0017.jpg" alt="نبات اصطناعي 1" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 1','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0018.jpg" alt="نبات اصطناعي 2" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 2','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0019.jpg" alt="نبات اصطناعي 3" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 3','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0020.jpg" alt="نبات اصطناعي 4" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 4','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0021.jpg" alt="نبات اصطناعي 5" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 5','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0022.jpg" alt="نبات اصطناعي 6" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 6','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0023.jpg" alt="نبات اصطناعي 7" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 7','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0024.jpg" alt="نبات اصطناعي 8" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 8','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0025.jpg" alt="نبات اصطناعي 9" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 9','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0026.jpg" alt="نبات اصطناعي 10" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 10','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0027.jpg" alt="نبات اصطناعي 11" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 11','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0028.jpg" alt="نبات اصطناعي 12" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 12','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0029.jpg" alt="نبات اصطناعي 13" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 13','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0030.jpg" alt="نبات اصطناعي 14" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 14','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0031.jpg" alt="نبات اصطناعي 15" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 15','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0032.jpg" alt="نبات اصطناعي 16" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 16','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0033.jpg" alt="نبات اصطناعي 17" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 17','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0034.jpg" alt="نبات اصطناعي 18" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 18','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0035.jpg" alt="نبات اصطناعي 19" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 19','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0036.jpg" alt="نبات اصطناعي 20" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 20','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0037.jpg" alt="نبات اصطناعي 21" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 21','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0038.jpg" alt="نبات اصطناعي 22" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 22','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0039.jpg" alt="نبات اصطناعي 23" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 23','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0040.jpg" alt="نبات اصطناعي 24" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 24','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0041.jpg" alt="نبات اصطناعي 25" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 25','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+        <div class="product">
+            <img src="plante artificielle/IMG-20251217-WA0042.jpg" alt="نبات اصطناعي 26" loading="lazy">
+            <p class="price">199 درهم</p>
+            <a href="#" class="btn-order" onclick="orderNow('نبات اصطناعي 26','199 درهم')">🛒 اطلب الآن</a>
+        </div>
+    </div>
+</div>
+
+<!-- زر واتساب عائم -->
+<a href="#" class="whatsapp-float" onclick="openWhatsapp()">💬</a>
+
+<script>
+// رقم الهاتف
+const phoneNumber = "+212728423391";
+
+// رسالة واتساب لكل منتج
+function createMessage(product, price) {
+    return `
+السلام عليكم 🌿
+أرغب في طلب المنتج التالي:
+
+🪴 المنتج: ${product}
+💰 السعر: ${price}
+🚚 التوصيل: مجاني لجميع أنحاء المملكة
+
+الاسم:
+المدينة:
+العنوان:
+`;
+}
+
+// زر اطلب الآن
+function orderNow(product, price) {
+    const message = encodeURIComponent(createMessage(product, price));
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+}
+
+// زر واتساب العائم
+function openWhatsapp() {
+    const message = encodeURIComponent(`
+السلام عليكم 🌿
+أرغب في الاستفسار أو الطلب.
+
+الاسم:
+المدينة:
+`);
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+}
+</script>
+
+</body>
